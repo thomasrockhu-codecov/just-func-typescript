@@ -1,0 +1,89 @@
+{
+  "name": "just-func",
+  "version": "0.0.0-development",
+  "description": "TypeScript/JavaScript implementation of just-func",
+  "keywords": [
+    "just-func"
+  ],
+  "homepage": "https://github.com/justland/just-func-typescript",
+  "bugs": {
+    "url": "https://github.com/justland/just-func-typescript/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justland/just-func-typescript.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Homa Wong (unional)",
+    "email": "homawong@gmail.com",
+    "url": "https://github.com/unional"
+  },
+  "sideEffects": false,
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "esm",
+    "ts"
+  ],
+  "scripts": {
+    "build": "yarn build:esm && yarn build:lib",
+    "build:lib": "tsc -p tsconfig.lib.json",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:watch": "tsc --watch",
+    "clean": "rimraf .nyc_output .ts coverage lib esm",
+    "coverage": "jest --coverage --maxWorkers=60%",
+    "depcheck": "yarn dependency-check",
+    "dependency-check": "dependency-check . --unused --no-dev && dependency-check . --missing --no-dev",
+    "lint": "eslint --ext=js,ts .",
+    "nuke": "yarn clean && rimraf node_modules",
+    "test": "jest --maxWorkers=60%",
+    "test:watch": "jest --watch --maxWorkers=60%",
+    "verify": "yarn lint && yarn build && yarn dependency-check && yarn coverage",
+    "watch": "yarn test:watch"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.12.16",
+    "@babel/core": "^7.12.16",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.12.13",
+    "@babel/plugin-proposal-optional-chaining": "^7.12.16",
+    "@babel/preset-env": "^7.12.16",
+    "@babel/preset-typescript": "^7.12.16",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@types/eslint": "^7",
+    "@types/jest": "^26.0.20",
+    "@types/wordwrap": "github:types/wordwrap",
+    "@types/yargs-parser": "^20.2.0",
+    "@typescript-eslint/eslint-plugin": "^4.15.0",
+    "@typescript-eslint/parser": "^4.15.0",
+    "babel-jest": "^26.6.3",
+    "commitlint-circle": "^1.0.0",
+    "dependency-check": "^4.1.0",
+    "eslint": "^7.19.0",
+    "eslint-plugin-harmony": "^5.0.2",
+    "husky": "^5.0.9",
+    "jest": "^26.6.3",
+    "jest-audio-reporter": "^2.2.1",
+    "jest-junit": "^12.0.0",
+    "jest-progress-tracker": "^2.0.2",
+    "jest-watch-repeat": "^2.0.0",
+    "jest-watch-suspend": "^1.1.2",
+    "jest-watch-toggle-config": "^2.0.1",
+    "jest-watch-typeahead": "^0.6.1",
+    "npm-check-updates": "^11.1.1",
+    "semantic-release": "^17.3.8",
+    "typescript": "^4.1.5"
+  },
+  "engines": {
+    "node": ">= 8"
+  }
+}
