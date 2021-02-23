@@ -39,11 +39,11 @@ jobs:
       - run: yarn lint
       - run: yarn build
       - run: yarn dependency-check
-      - name: upload lib folder
+      - name: upload cjs folder
         uses: actions/upload-artifact@v1
         with:
-          name: lib
-          path: lib
+          name: cjs
+          path: cjs
       - name: upload esm folder
         uses: actions/upload-artifact@v1
         with:
@@ -106,10 +106,10 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
-      - name: download lib folder
+      - name: download cjs folder
         uses: actions/download-artifact@v1
         with:
-          name: lib
+          name: cjs
       - name: download esm folder
         uses: actions/download-artifact@v1
         with:

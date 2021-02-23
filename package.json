@@ -20,20 +20,20 @@
     "url": "https://github.com/unional"
   },
   "sideEffects": false,
-  "main": "lib/index.js",
+  "main": "cjs/index.js",
   "module": "esm/index.js",
-  "typings": "lib/index.d.ts",
+  "typings": "cjs/index.d.ts",
   "files": [
-    "lib",
+    "cjs",
     "esm",
     "ts"
   ],
   "scripts": {
-    "build": "yarn build:esm && yarn build:lib",
-    "build:lib": "tsc -p tsconfig.lib.json",
+    "build": "yarn build:esm && yarn build:cjs",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
     "build:esm": "tsc -p tsconfig.esm.json",
     "build:watch": "tsc --watch",
-    "clean": "rimraf .nyc_output .ts coverage lib esm",
+    "clean": "rimraf .nyc_output .ts coverage cjs esm",
     "coverage": "jest --coverage --maxWorkers=60%",
     "depcheck": "yarn dependency-check",
     "dependency-check": "dependency-check . --unused --no-dev && dependency-check . --missing --no-dev",
@@ -42,7 +42,8 @@
     "test": "jest --maxWorkers=60%",
     "test:watch": "jest --watch --maxWorkers=60%",
     "verify": "yarn lint && yarn build && yarn dependency-check && yarn coverage",
-    "watch": "yarn test:watch"
+    "watch": "yarn test:watch",
+    "semantic-release": "semantic-release"
   },
   "husky": {
     "hooks": {
@@ -80,7 +81,7 @@
     "jest-watch-toggle-config": "^2.0.1",
     "jest-watch-typeahead": "^0.6.1",
     "npm-check-updates": "^11.1.1",
-    "semantic-release": "^17.3.8",
+    "semantic-release": "^17.3.9",
     "typescript": "^4.1.5"
   },
   "engines": {
