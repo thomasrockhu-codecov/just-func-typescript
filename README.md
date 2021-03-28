@@ -4,7 +4,8 @@
 [![NPM downloads][downloads-image]][downloads-url]
 
 [![Github NodeJS][github-nodejs]][github-action-url]
-[![Codecov][codecov-image]][codecov-url]
+[![Codacy Grade][codacy-grade]][codacy-url]
+[![Codacy Coverage][codacy-coverage]][codacy-url]
 [![Codacy Badge][codacy-image]][codacy-url]
 
 [![Semantic Release][semantic-release-image]][semantic-release-url]
@@ -13,7 +14,8 @@
 
 TypeScript/JavaScript implementation of [just-func](https://github.com/justland/just-func).
 
-[codacy-image]: https://app.codacy.com/project/badge/Grade/cb8acd44f2874dbf85b1755a85690097
+[codacy-grade]: https://app.codacy.com/project/badge/Grade/cb8acd44f2874dbf85b1755a85690097
+[codacy-coverage]: https://app.codacy.com/project/badge/Coverage/cb8acd44f2874dbf85b1755a85690097
 [codacy-url]: https://www.codacy.com/gh/justland/just-func-typescript/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=justland/just-func-typescript&amp;utm_campaign=Badge_Grade
 [codecov-image]: https://codecov.io/gh/justland/just-func-typescript/branch/master/graph/badge.svg
 [codecov-url]: https://codecov.io/gh/justland/just-func-typescript
