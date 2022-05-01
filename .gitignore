@@ -50,6 +50,7 @@ build/Release
 .idea
 
 # project folders
-.ts
+.typescript
 cjs*
 esm*
+lib

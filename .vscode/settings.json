@@ -1,7 +1,8 @@
 {
   "cSpell.words": [
     "macos",
-    "testname"
+    "testname",
+    "tsbuildinfo"
   ],
   "files.associations": {
     ".depcheckrc": "yaml"

@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": ".typescript/tsconfig.build.tsbuildinfo"
+  },
+  "exclude": [
+    "**/*.spec.ts",
+    "**/*.stories.tsx"
+  ]
+}
