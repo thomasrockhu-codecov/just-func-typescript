@@ -1,4 +1,4 @@
-# just-func-typescript
+# just-func
 
 [![NPM version][npm-image]][npm-url]
 [![NPM downloads][downloads-image]][downloads-url]

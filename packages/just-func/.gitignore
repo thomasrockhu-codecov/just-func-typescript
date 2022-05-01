@@ -1,0 +1,5 @@
+# project folders
+.typescript
+cjs*
+esm*
+lib

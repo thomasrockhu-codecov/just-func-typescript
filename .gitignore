@@ -48,9 +48,3 @@ build/Release
 
 # webstorm
 .idea
-
-# project folders
-.typescript
-cjs*
-esm*
-lib
