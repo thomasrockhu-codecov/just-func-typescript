@@ -1,0 +1,14 @@
+name: release
+on:
+  push:
+    branches:
+      - main
+jobs:
+  code:
+    uses: unional/.github/.github/workflows/yarn2-library-verify-linux.yml@main
+
+  release:
+    uses: unional/.github/.github/workflows/yarn2-library-release.yml@main
+    needs: code
+    with:
+      npm-token: ${{ secrets.NPM_TOKEN }}
