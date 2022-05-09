@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    // incremental may not be needed with `turborepo`
+    "incremental": true,
+    "inlineSources": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "newLine": "LF",
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "outDir": "lib",
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "rootDir": "ts",
+    "sourceMap": true,
+    "strict": true,
+    "stripInternal": true,
+    "target": "ES2020",
+    "useDefineForClassFields": true
+  },
+  "include": [
+    "ts",
+    "typings"
+  ]
+}

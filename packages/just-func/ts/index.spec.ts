@@ -1,1 +1,5 @@
-it.todo('not test yet')
+import { toJustValue } from '.'
+
+it('export types from @just-func/types', () => {
+  expect(toJustValue).toBeDefined()
+})

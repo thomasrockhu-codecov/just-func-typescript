@@ -2171,6 +2171,37 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@just-func/types@workspace:*, @just-func/types@workspace:packages/types":
+  version: 0.0.0-use.local
+  resolution: "@just-func/types@workspace:packages/types"
+  dependencies:
+    "@babel/core": 7.17.10
+    "@babel/preset-env": 7.17.10
+    "@babel/preset-typescript": 7.16.7
+    "@size-limit/preset-small-lib": 7.0.8
+    "@types/jest": 27.5.0
+    "@typescript-eslint/eslint-plugin": 5.22.0
+    "@typescript-eslint/parser": 5.22.0
+    cross-env: 7.0.3
+    depcheck: 1.4.3
+    eslint: 8.15.0
+    eslint-config-prettier: 8.5.0
+    eslint-plugin-harmony: 6.1.0
+    jest: 28.1.0
+    jest-progress-tracker: 3.0.4
+    jest-validate: 28.1.0
+    jest-watch-repeat: 2.0.0
+    jest-watch-suspend: 1.1.2
+    jest-watch-toggle-config: 2.0.1
+    jest-watch-typeahead: 1.1.0
+    npm-check-updates: 12.5.11
+    npm-run-all: 4.1.5
+    rimraf: 3.0.2
+    size-limit: 7.0.8
+    type-plus: ^4.9.0
+  languageName: unknown
+  linkType: soft
+
 "@manypkg/find-root@npm:^1.1.0":
   version: 1.1.0
   resolution: "@manypkg/find-root@npm:1.1.0"
@@ -7069,6 +7100,7 @@ __metadata:
     "@babel/core": 7.17.10
     "@babel/preset-env": 7.17.10
     "@babel/preset-typescript": 7.16.7
+    "@just-func/types": "workspace:*"
     "@size-limit/preset-small-lib": 7.0.8
     "@types/jest": 27.5.0
     "@typescript-eslint/eslint-plugin": 5.22.0

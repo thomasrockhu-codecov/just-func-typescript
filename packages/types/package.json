@@ -1,11 +1,12 @@
 {
-  "name": "just-func",
-  "version": "0.1.1",
-  "description": "TypeScript/JavaScript implementation of just-func",
+  "name": "@just-func/types",
+  "version": "0.1.0",
+  "description": "Types for just-func code",
   "keywords": [
-    "just-func"
+    "just-func",
+    "types"
   ],
-  "homepage": "https://github.com/justland/just-func-typescript/tree/main/packages/just-func",
+  "homepage": "https://github.com/justland/just-func-typescript/tree/main/packages/types",
   "bugs": {
     "url": "https://github.com/justland/just-func-typescript/issues"
   },
@@ -25,9 +26,9 @@
     "lib"
   ],
   "scripts": {
-    "build": "run-p tsc:build",
-    "build:watch": "run-p tsc:build:watch",
-    "clean": "rimraf .nyc_output .typescript coverage cjs esm lib",
+    "build": "run-s ts:clean ts:build",
+    "build:watch": "run-s ts:clean ts:build:watch",
+    "clean": "rimraf .nyc_output .tsbuildinfo coverage cjs esm lib || true",
     "coverage": "jest --coverage",
     "depcheck": "depcheck",
     "jest:test": "jest",
@@ -37,13 +38,14 @@
     "nuke:local": "rimraf node_modules || true",
     "size": "size-limit",
     "test": "run-p jest:test",
-    "tsc:build": "tsc -p tsconfig.build.json",
-    "tsc:build:watch": "tsc -p tsconfig.build.json --watch",
+    "ts:build": "tsc -p tsconfig.build.json",
+    "ts:build:watch": "tsc -p tsconfig.build.json --watch",
+    "ts:clean": "rimraf .tsbuildinfo || true",
     "verify": "npm-run-all -p build lint coverage depcheck -s size",
     "watch": "run-p jest:watch"
   },
   "dependencies": {
-    "@just-func/types": "workspace:*"
+    "type-plus": "^4.9.0"
   },
   "devDependencies": {
     "@babel/core": "7.17.10",

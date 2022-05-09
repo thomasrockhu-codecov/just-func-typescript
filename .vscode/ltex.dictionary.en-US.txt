@@ -10,3 +10,5 @@ PnP
 
 corepack
 changesets
+
+@just-func

@@ -22,3 +22,10 @@ export type JustValue<
     : (Equal<Value, undefined> extends true
       ? JustEmpty
       : JustUno<Value>))
+
+export type JustResult<
+  Value = void,
+  Meta extends JustMeta | undefined = undefined> =
+  (Meta extends JustMeta
+    ? JustDuo<Value, Meta>
+    : (Value extends Array<any> ? JustUno<Value> : Value))
