@@ -20,7 +20,7 @@
     "size": "turbo run size",
     "test": "turbo run test",
     "version": "yarn cs version",
-    "verify": "turbo run lint build coverage depcheck size",
+    "verify": "turbo run coverage",
     "watch": "jest --watch"
   },
   "devDependencies": {
